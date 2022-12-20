@@ -1,0 +1,51 @@
+<h2 class="screen-align">Create a gepPhyscialAdressManager</h2>
+<div id="template-ixcw" class="gjs-row">
+    <div id="template-i23k" class="gjs-cell">
+        <label id="template-ipbn" class="label ">
+            <div id="template-i6uza" class="">Name</div>
+        </label>
+        <input id="template-i7emo" [(ngModel)]="addresslocation.name" [ngModelOptions]="{standalone: true}"
+        ngDefaultControl class="input form-control " />
+    </div>
+    <div id="template-i45l" class="gjs-cell">
+        <label id="template-i4k98" class="label ">
+            <div id="template-i1kvh" class="">countrycode</div>
+        </label>
+        <input id="template-i4mq5" [(ngModel)]="addresslocation.countrycode" [ngModelOptions]="{standalone: true}"
+        ngDefaultControl class="input form-control " />
+    </div>
+    <div id="template-i5hz" class="gjs-cell">
+        <label id="template-i0x6x" class="label ">
+            <div id="template-i3vjj" class="">geonameid</div>
+        </label>
+        <input id="template-iida9" [(ngModel)]="addresslocation.geonameid" [ngModelOptions]="{standalone: true}"
+        ngDefaultControl class="input form-control " />
+    </div>
+</div>
+<div id="template-i7u2" class="gjs-row">
+    <div id="template-izxe" class="gjs-cell">
+        <label id="template-ibq1f" class="label ">
+            <div id="template-iaw5i" class="">lattitude</div>
+        </label>
+        <input id="template-i0n5n" [(ngModel)]="addresslocation.latitude" [ngModelOptions]="{standalone: true}"
+        ngDefaultControl class="input form-control " />
+        <button id="template-ib8wa" (click)="GpCreate()" class="button btn btn-primary ">
+            <div id="template-ihvid" class="">Create</div>
+        </button>
+    </div>
+    <div id="template-i9gh" class="gjs-cell">
+        <label id="template-i6rbx" class="label ">
+            <div id="template-i9knf" class="">longitude</div>
+        </label>
+        <input id="template-iq4s9" [(ngModel)]="addresslocation.longitude" [ngModelOptions]="{standalone: true}"
+        ngDefaultControl class="input form-control " />
+    </div>
+    <div id="template-igs4" class="gjs-cell"></div>
+</div>
+<div name="grid_template-iofp8" id="template-iofp8">
+    <ag-grid-angular #agGrid style="width: 100%; height: 100%;" id="myGrid"
+    class="ag-theme-balham" [columnDefs]="columnDefs" [pagination]="true" [paginationPageSize]="paginationPageSize"
+    [defaultColDef]="defaultColDef" [rowData]="rowData" [rowSelection]="rowSelection"
+    (rowClicked)="onRowClick($event)" (gridReady)="onGridReady($event)" domLayout='autoHeight'></ag-grid-angular>
+</div>
+<div id="myGrid" class="ag-theme-alpine "></div>

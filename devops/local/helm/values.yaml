@@ -54,8 +54,8 @@ service:
   systementry: 
     name: systementry
     type: NodePort
-    port: 8022
-    targetPort: 8022
+    port: 8069
+    targetPort: 8069
 
   gepphysicaladdressmanager: 
     name: gepphysicaladdressmanager
